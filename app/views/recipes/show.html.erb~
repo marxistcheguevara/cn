@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+<div class="row clearfix">
+		<div class="col-md-4 column">
+			<h3 class="text-danger">
+  <strong>  <%= @recipe.title %> </strong>
+
+
+			</h3><img class="img-thumbnail" alt="140x140" src="http://lorempixel.com/140/140/" />
+		</div>
+		<div class="col-md-6 column">
+			<hr><hr><hr><hr>
+			<ul>
+				<li>
+				
+  				<strong>Bişmə vaxtı:</strong>  <%= @recipe.cooking_time %>
+						
+				</li>
+				
+				<li>
+					  <strong>Çətinlik dərəcəsi:</strong> <%= @recipe.difficulty_level %>
+
+				</li>
+				
+ 				<li>
+					  <strong>Yemək növü:</strong> <%= @recipe.food_type.name %>
+				</li>
+<hr>
+				<li>
+  <strong>Diet:</strong>
+  <%= @recipe.food_preference.name %>
+  </li>
+
+<li>
+  <strong>Mətbəx:</strong> <%= @recipe.cuisine.name %>
+</li>
+<li>
+  <strong>Möhtəviyyat:</strong>
+  <%= @recipe.ingredients %>
+</li>
+ 				
+ 					
+ 
+ 			</ul>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<h2>
+				Bişirilmə qaydası
+			</h2>
+			<p>
+  <%= @recipe.procedure %>
+			</p>
+		</div>
+	</div>
+
+
+	
+
+
+
+
+<p> <%= link_to 'Düzəliş', edit_recipe_path(@recipe), :class =>"btn btn-success btn-small" %> <%= link_to 'Geri', recipes_path, :class =>"btn btn-default btn-small" %></p>
